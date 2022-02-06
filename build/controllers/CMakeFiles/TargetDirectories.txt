@@ -1,9 +1,0 @@
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/install/strip.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/install/local.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/install.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/list_install_components.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/rebuild_cache.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/edit_cache.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/test.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/controllers_uninstall.dir
-/workspaces/spex_urc_rover/build/controllers/CMakeFiles/uninstall.dir
