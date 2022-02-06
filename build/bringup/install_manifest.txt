@@ -1,0 +1,15 @@
+/workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/package_run_dependencies/bringup
+/workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/parent_prefix_path/bringup
+/workspaces/spex_urc_rover/install/bringup/share/bringup/environment/ament_prefix_path.sh
+/workspaces/spex_urc_rover/install/bringup/share/bringup/environment/ament_prefix_path.dsv
+/workspaces/spex_urc_rover/install/bringup/share/bringup/environment/path.sh
+/workspaces/spex_urc_rover/install/bringup/share/bringup/environment/path.dsv
+/workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.bash
+/workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.sh
+/workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.zsh
+/workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.dsv
+/workspaces/spex_urc_rover/install/bringup/share/bringup/package.dsv
+/workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/packages/bringup
+/workspaces/spex_urc_rover/install/bringup/share/bringup/cmake/bringupConfig.cmake
+/workspaces/spex_urc_rover/install/bringup/share/bringup/cmake/bringupConfig-version.cmake
+/workspaces/spex_urc_rover/install/bringup/share/bringup/package.xml

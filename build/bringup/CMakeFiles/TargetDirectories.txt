@@ -1,0 +1,9 @@
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/install/strip.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/install/local.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/install.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/list_install_components.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/rebuild_cache.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/edit_cache.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/test.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/bringup_uninstall.dir
+/workspaces/spex_urc_rover/build/bringup/CMakeFiles/uninstall.dir

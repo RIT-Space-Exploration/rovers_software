@@ -1,0 +1,45 @@
+[0.177s] Invoking command in '/workspaces/spex_urc_rover/build/controllers': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /workspaces/spex_urc_rover/src/controllers -DCMAKE_INSTALL_PREFIX=/workspaces/spex_urc_rover/install/controllers
+[1.443s] -- The C compiler identification is GNU 9.3.0
+[2.501s] -- The CXX compiler identification is GNU 9.3.0
+[2.589s] -- Check for working C compiler: /usr/bin/cc
+[4.144s] -- Check for working C compiler: /usr/bin/cc -- works
+[4.153s] -- Detecting C compiler ABI info
+[5.612s] -- Detecting C compiler ABI info - done
+[5.724s] -- Detecting C compile features
+[5.730s] -- Detecting C compile features - done
+[5.769s] -- Check for working CXX compiler: /usr/bin/c++
+[7.350s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[7.365s] -- Detecting CXX compiler ABI info
+[8.934s] -- Detecting CXX compiler ABI info - done
+[9.056s] -- Detecting CXX compile features
+[9.068s] -- Detecting CXX compile features - done
+[9.106s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[9.416s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[9.425s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[10.175s] -- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[11.004s] -- Added test 'copyright' to check source files copyright and LICENSE
+[11.048s] -- Added test 'lint_cmake' to check CMake code style
+[11.076s] -- Added test 'xmllint' to check XML markup files
+[11.200s] -- Configuring done
+[11.496s] -- Generating done
+[11.610s] -- Build files have been written to: /workspaces/spex_urc_rover/build/controllers
+[11.651s] Invoked command in '/workspaces/spex_urc_rover/build/controllers' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /workspaces/spex_urc_rover/src/controllers -DCMAKE_INSTALL_PREFIX=/workspaces/spex_urc_rover/install/controllers
+[11.665s] Invoking command in '/workspaces/spex_urc_rover/build/controllers': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_urc_rover/build/controllers -- -j4 -l4
+[12.151s] Invoked command in '/workspaces/spex_urc_rover/build/controllers' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_urc_rover/build/controllers -- -j4 -l4
+[12.590s] Invoking command in '/workspaces/spex_urc_rover/build/controllers': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_urc_rover/build/controllers
+[12.674s] -- Install configuration: ""
+[12.705s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/ament_index/resource_index/package_run_dependencies/controllers
+[12.738s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/ament_index/resource_index/parent_prefix_path/controllers
+[12.775s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/environment/ament_prefix_path.sh
+[12.800s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/environment/ament_prefix_path.dsv
+[12.830s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/environment/path.sh
+[12.855s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/environment/path.dsv
+[12.890s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/local_setup.bash
+[12.937s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/local_setup.sh
+[12.973s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/local_setup.zsh
+[13.004s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/local_setup.dsv
+[13.038s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/package.dsv
+[13.078s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/ament_index/resource_index/packages/controllers
+[13.117s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/cmake/controllersConfig.cmake
+[13.147s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/cmake/controllersConfig-version.cmake
+[13.190s] -- Installing: /workspaces/spex_urc_rover/install/controllers/share/controllers/package.xml

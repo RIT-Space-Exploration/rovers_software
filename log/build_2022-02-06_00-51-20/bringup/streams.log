@@ -1,0 +1,46 @@
+[0.189s] Invoking command in '/workspaces/spex_urc_rover/build/bringup': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /workspaces/spex_urc_rover/src/bringup -DCMAKE_INSTALL_PREFIX=/workspaces/spex_urc_rover/install/bringup
+[1.524s] -- The C compiler identification is GNU 9.3.0
+[2.580s] -- The CXX compiler identification is GNU 9.3.0
+[2.655s] -- Check for working C compiler: /usr/bin/cc
+[4.181s] -- Check for working C compiler: /usr/bin/cc -- works
+[4.193s] -- Detecting C compiler ABI info
+[5.601s] -- Detecting C compiler ABI info - done
+[5.721s] -- Detecting C compile features
+[5.732s] -- Detecting C compile features - done
+[5.773s] -- Check for working CXX compiler: /usr/bin/c++
+[7.317s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[7.328s] -- Detecting CXX compiler ABI info
+[8.964s] -- Detecting CXX compiler ABI info - done
+[9.082s] -- Detecting CXX compile features
+[9.096s] -- Detecting CXX compile features - done
+[9.163s] -- Found ament_cmake: 1.1.4 (/opt/ros/galactic/share/ament_cmake/cmake)
+[9.485s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[9.505s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[10.243s] -- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[11.063s] -- Added test 'copyright' to check source files copyright and LICENSE
+[11.104s] -- Added test 'lint_cmake' to check CMake code style
+[11.135s] -- Added test 'xmllint' to check XML markup files
+[11.279s] -- Configuring done
+[11.577s] -- Generating done
+[11.678s] -- Build files have been written to: /workspaces/spex_urc_rover/build/bringup
+[11.695s] Invoked command in '/workspaces/spex_urc_rover/build/bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /workspaces/spex_urc_rover/src/bringup -DCMAKE_INSTALL_PREFIX=/workspaces/spex_urc_rover/install/bringup
+[11.713s] Invoking command in '/workspaces/spex_urc_rover/build/bringup': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_urc_rover/build/bringup -- -j4 -l4
+[12.187s] Invoked command in '/workspaces/spex_urc_rover/build/bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_urc_rover/build/bringup -- -j4 -l4
+[12.645s] Invoking command in '/workspaces/spex_urc_rover/build/bringup': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_urc_rover/build/bringup
+[12.730s] -- Install configuration: ""
+[12.754s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/package_run_dependencies/bringup
+[12.791s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/parent_prefix_path/bringup
+[12.827s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/environment/ament_prefix_path.sh
+[12.854s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/environment/ament_prefix_path.dsv
+[12.884s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/environment/path.sh
+[12.911s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/environment/path.dsv
+[12.935s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.bash
+[12.972s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.sh
+[13.021s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.zsh
+[13.054s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/local_setup.dsv
+[13.090s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/package.dsv
+[13.120s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/ament_index/resource_index/packages/bringup
+[13.159s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/cmake/bringupConfig.cmake
+[13.197s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/cmake/bringupConfig-version.cmake
+[13.230s] -- Installing: /workspaces/spex_urc_rover/install/bringup/share/bringup/package.xml
+[13.280s] Invoked command in '/workspaces/spex_urc_rover/build/bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_urc_rover/build/bringup
