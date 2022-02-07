@@ -1,0 +1,1 @@
+/workspaces/spex_rover/build/controller_manager_msgs/rosidl_cmake/srv/ListHardwareInterfaces_Response.msg

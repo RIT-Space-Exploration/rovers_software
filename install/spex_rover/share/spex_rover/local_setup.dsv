@@ -1,2 +1,1 @@
-source;share/spex_rover/environment/ament_prefix_path.sh
-source;share/spex_rover/environment/path.sh
+/workspaces/spex_rover/build/spex_rover/ament_cmake_environment_hooks/local_setup.dsv

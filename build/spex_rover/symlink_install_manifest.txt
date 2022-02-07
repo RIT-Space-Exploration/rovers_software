@@ -1,0 +1,15 @@
+/workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/package_run_dependencies/spex_rover
+/workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/parent_prefix_path/spex_rover
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/ament_prefix_path.sh
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/ament_prefix_path.dsv
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/path.sh
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/path.dsv
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.bash
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.sh
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.zsh
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.dsv
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/package.dsv
+/workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/packages/spex_rover
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/cmake/spex_roverConfig.cmake
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/cmake/spex_roverConfig-version.cmake
+/workspaces/spex_rover/install/spex_rover/share/spex_rover/package.xml

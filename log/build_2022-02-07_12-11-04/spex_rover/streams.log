@@ -1,0 +1,20 @@
+[0.545s] Invoking command in '/workspaces/spex_rover/build/spex_rover': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_rover/build/spex_rover -- -j4 -l4
+[1.701s] Invoked command in '/workspaces/spex_rover/build/spex_rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_rover/build/spex_rover -- -j4 -l4
+[11.303s] Invoking command in '/workspaces/spex_rover/build/spex_rover': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_rover/build/spex_rover
+[11.581s] -- Install configuration: ""
+[11.591s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/package_run_dependencies/spex_rover
+[11.606s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/parent_prefix_path/spex_rover
+[11.630s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/ament_prefix_path.sh
+[11.658s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/ament_prefix_path.dsv
+[11.671s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/path.sh
+[11.678s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/environment/path.dsv
+[11.693s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.bash
+[11.699s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.sh
+[11.717s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.zsh
+[11.767s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/local_setup.dsv
+[11.813s] -- Installing: /workspaces/spex_rover/install/spex_rover/share/spex_rover/package.dsv
+[11.820s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/ament_index/resource_index/packages/spex_rover
+[11.827s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/cmake/spex_roverConfig.cmake
+[11.836s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/cmake/spex_roverConfig-version.cmake
+[11.842s] -- Up-to-date: /workspaces/spex_rover/install/spex_rover/share/spex_rover/package.xml
+[11.854s] Invoked command in '/workspaces/spex_rover/build/spex_rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_rover/build/spex_rover

@@ -1,0 +1,49 @@
+{
+  "package_name": "controller_manager_msgs",
+  "output_dir": "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs",
+  "template_dir": "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource",
+  "idl_tuples": [
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:msg/ControllerState.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:msg/HardwareInterface.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ConfigureController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ConfigureStartController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ListControllers.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ListControllerTypes.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ListHardwareInterfaces.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/LoadConfigureController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/LoadController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/LoadStartController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/ReloadControllerLibraries.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/SwitchController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs:srv/UnloadController.idl"
+  ],
+  "ros_interface_dependencies": [
+    "builtin_interfaces:/opt/ros/galactic/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/galactic/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/galactic/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp",
+    "/opt/ros/galactic/lib/python3.8/site-packages/rosidl_typesupport_fastrtps_cpp/__init__.py",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/idl__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/msg__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/galactic/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/msg/ControllerState.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/msg/HardwareInterface.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ConfigureController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ConfigureStartController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ListControllers.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ListControllerTypes.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ListHardwareInterfaces.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/LoadConfigureController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/LoadController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/LoadStartController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/ReloadControllerLibraries.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/SwitchController.idl",
+    "/workspaces/spex_rover/build/controller_manager_msgs/rosidl_adapter/controller_manager_msgs/srv/UnloadController.idl",
+    "/opt/ros/galactic/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/galactic/share/builtin_interfaces/msg/Time.idl"
+  ]
+}
