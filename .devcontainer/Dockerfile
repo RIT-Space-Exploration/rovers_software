@@ -6,6 +6,9 @@ RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/in
 
 RUN export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
+RUN git config user.name "Sean Clifford"
+RUN git config user.email "seancliff01@gmail.com"
+
 RUN sudo apt update
 RUN sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup '~ros-galactic-turtlebot3-.*'
 RUN rosdep update
