@@ -8,6 +8,8 @@
 	},
 	"remoteUser": "ros",
 	"runArgs": [
+		"--privileged",
+		"--device=/dev/tty.usbserial-0001",
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
