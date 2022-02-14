@@ -12,6 +12,7 @@
 		"--env='DISPLAY=10.182.113.137:0'",
 		"--device=/dev/tty.usbserial-0001",
 		"--network=host",
+		"--port=22:22",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
 		"--security-opt=apparmor:unconfined",

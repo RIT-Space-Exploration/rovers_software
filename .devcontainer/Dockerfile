@@ -14,6 +14,10 @@ RUN sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup '~ros-ga
 RUN sudo apt install ros-galactic-joint-state-publisher-gui -y
 RUN sudo apt install ros-galactic-xacro -y
 RUN sudo apt install rviz -y
+
+RUN sudo apt install openssh-server -y
+RUN sudo service ssh start
+
 #RUN sudo apt update
 
 # RUN sudo apt -y install ros-galactic-navigation2 ros-galactic-nav2-bringup '~ros-galactic-turtlebot3-.*'
