@@ -9,7 +9,7 @@
 	"remoteUser": "ros",
 	"runArgs": [
 		"--privileged",
-		"--env='DISPLAY'",
+		"--env='DISPLAY=10.182.113.137:0'",
 		"--device=/dev/tty.usbserial-0001",
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
