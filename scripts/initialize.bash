@@ -1,17 +1,19 @@
-sudo apt update
-sudo apt dist-upgrade
+#sudo apt update -y
+#sudo apt dist-upgrade -y
 
-sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup '~ros-galactic-turtlebot3-.*' -y
-sudo apt install ros-galactic-joint-state-publisher-gui
-sudo apt install ros-galactic-xacro
-sudo apt install rviz
+#sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup '~ros-galactic-turtlebot3-.*' -y
+#sudo apt install ros-galactic-joint-state-publisher-gui -y
+#sudo apt install ros-galactic-xacro -y
+#sudo apt install rviz -y
 
 echo 'export RMW_IMPLEMENTATION=rmw_fastrtps_cpp' >> ~/.bashrc
 
+git push origin/dev_galactic
 git fetch origin galactic
-git checkout -b dev_galactic origin/galactic || git checkout origin/galactic
+git rebase origin/dev_galactic
+#git checkout -b dev_galactic origin/galactic || git checkout origin/galactic
 
-sudo apt install python3-colcon-mixin
+sudo apt install python3-colcon-mixin -y
 colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 colcon mixin update default
 
