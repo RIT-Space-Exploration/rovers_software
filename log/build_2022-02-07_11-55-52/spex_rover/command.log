@@ -1,4 +1,0 @@
-Invoking command in '/workspaces/spex_rover/build/spex_rover': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_rover/build/spex_rover -- -j4 -l4
-Invoked command in '/workspaces/spex_rover/build/spex_rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /workspaces/spex_rover/build/spex_rover -- -j4 -l4
-Invoking command in '/workspaces/spex_rover/build/spex_rover': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_rover/build/spex_rover
-Invoked command in '/workspaces/spex_rover/build/spex_rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /workspaces/spex_rover/build/spex_rover

@@ -1,4 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.005332] (-) JobUnselected: {'identifier': 'rplidar_ros'}
-[0.006933] (-) JobUnselected: {'identifier': 'spex_rover'}
-[0.010721] (-) EventReactorShutdown: {}
