@@ -16,8 +16,8 @@
   <!-- The wheel_zoff and wheel_xoff position the front and back wheels along the z-axis and x-axis
        appropriately -->
   <xacro:property name="wheel_front_zoff" value="0.05"/>
-  <xacro:property name="wheel_front_xoff" value="0.12"/>
   <xacro:property name="wheel_back_zoff" value="0.05"/>
+  <xacro:property name="wheel_front_xoff" value="0.12"/>
   <xacro:property name="wheel_back_xoff" value="0.38"/>
   
 
@@ -57,7 +57,7 @@
     We take the sum of the wheel_radius and the wheel_zoff to get the appropriate location
     along the z-axis.
     -->
-    <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_front_zoff)}" rpy="0 0 0"/>
   </joint>
 
   <!--
@@ -70,7 +70,7 @@
         - x_reflect and y_reflect: allows us to flip the positions of our wheels with respect to
                                    the x and y axis respectively.
   -->
-  <xacro:macro name="wheel" params="prefix x_reflect y_reflect">
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect location">
     <link name="${prefix}_link">
       <visual>
         <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
@@ -87,18 +87,32 @@
     We will define a continuous joint to allow our wheels to freely rotate about an axis. 
     This joint also connects our wheel to the base_link at the appropriate location.
     -->
-    <joint name="${prefix}_joint" type="continuous">
-      <parent link="base_link"/>
-      <child link="${prefix}_link"/>
-      <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
-      <axis xyz="0 1 0"/>
-    </joint>
+    <!--
+    <xacro:property name="front_position" value="front"/>
+    <xacro:property name="back_position" value="back"/>
+    -->
+    <xacro:if value="${location == 'front'}">
+      <joint name="${prefix}_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="${prefix}_link"/>
+        <origin xyz="${x_reflect*wheel_front_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_front_zoff}" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+    </xacro:if>
+    <xacro:if value="${location == 'back'}">
+      <joint name="${prefix}_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="${prefix}_link"/>
+        <origin xyz="${x_reflect*wheel_back_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_back_zoff}" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+      </joint>
+    </xacro:if>
   </xacro:macro>
 
   <!-- Instantiating 4 wheels using the macro created above -->
-  <xacro:wheel prefix="drivewhl_fl" x_reflect="1" y_reflect="1" />
-  <xacro:wheel prefix="drivewhl_fr" x_reflect="1" y_reflect="-1" />
-  <xacro:wheel prefix="drivewhl_bl" x_reflect="-1" y_reflect="1" />
-  <xacro:wheel prefix="drivewhl_br" x_reflect="-1" y_reflect="-1" />
+  <xacro:wheel prefix="drivewhl_fl" x_reflect="1" y_reflect="1" location="front" />
+  <xacro:wheel prefix="drivewhl_fr" x_reflect="1" y_reflect="-1" location="front" />
+  <xacro:wheel prefix="drivewhl_bl" x_reflect="-1" y_reflect="1" location="back" />
+  <xacro:wheel prefix="drivewhl_br" x_reflect="-1" y_reflect="-1" location="back" />
 
 </robot>
