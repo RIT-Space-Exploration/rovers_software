@@ -9,8 +9,8 @@
 echo 'export RMW_IMPLEMENTATION=rmw_fastrtps_cpp' >> ~/.bashrc
 echo 'export LC_NUMERIC="en_US.UTF-8"' >> ~/.bashrc
 
-git push origin/dev_galactic
-git fetch origin -b dev_galactic
+git push origin -b dev_galactic
+git fetch origin/dev_galactic
 git rebase origin/dev_galactic
 #git checkout -b dev_galactic origin/galactic || git checkout origin/galactic
 
