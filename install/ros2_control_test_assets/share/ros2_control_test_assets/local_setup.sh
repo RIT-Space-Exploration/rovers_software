@@ -1,1 +1,0 @@
-/workspaces/spex_rover/build/ros2_control_test_assets/ament_cmake_environment_hooks/local_setup.sh
