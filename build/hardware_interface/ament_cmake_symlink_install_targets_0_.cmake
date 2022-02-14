@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/workspaces/spex_rover/build/hardware_interface/libfake_components.so" "/workspaces/spex_rover/build/hardware_interface/libhardware_interface.so" "TARGETS" "fake_components" "hardware_interface" "RUNTIME_DESTINATION" "bin" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib")

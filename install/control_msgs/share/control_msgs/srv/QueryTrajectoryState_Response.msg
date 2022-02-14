@@ -1,1 +1,0 @@
-/workspaces/spex_rover/build/control_msgs/rosidl_cmake/srv/QueryTrajectoryState_Response.msg

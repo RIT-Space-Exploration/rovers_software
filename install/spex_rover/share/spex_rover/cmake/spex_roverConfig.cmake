@@ -1,1 +1,0 @@
-/workspaces/spex_rover/build/spex_rover/ament_cmake_core/spex_roverConfig.cmake
