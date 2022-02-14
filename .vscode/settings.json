@@ -71,4 +71,8 @@
         ".devcontainer/devcontainer.json"
     ],
     "cmake.configureOnOpen": false,
+    "cSpell.ignoreWords": [
+        "spex",
+        "urdf"
+    ],
 }
