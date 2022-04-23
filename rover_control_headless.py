@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 os.environ['SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS'] = '1'
-os.environ['SDL_VIDEODRIVER'] = 'dummy'
+#os.environ['SDL_VIDEODRIVER'] = 'dummy'
 
 pygame.init()
 screen = pygame.display.set_mode((400, 600))
@@ -33,6 +33,7 @@ pwm_right_front.start(PWM_OFF)
 
 not_connected = True
 
+# initial connection
 while not_connected:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -44,19 +45,30 @@ while not_connected:
 joystick = pygame.joystick.Joystick(0)
 joystick.init()
             
+joystick_enabled = True
 while True:
-    # handle joy device removed
-    while pygame.JOYDEVICEREMOVED:
-        if pygame.JOYDEVICEADDED:
-            joystick = pygame.joystick.Joystick(0)
-            joystick.init()
-    
     # process events
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-            pygame.quit()
+    allow_continue = False 
+    while not allow_continue:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                pygame.quit()
+            # handle joy device removed, if controller removed or sleeps during operation
+            if event.type == pygame.JOYDEVICEREMOVED:
+                print("Joystick removed")
+                joystick_enabled = False
+            if event.type == pygame.JOYDEVICEADDED:
+                print("Joystick added")
+                joystick = pygame.joystick.Joystick(0)
+                joystick.init()
+                joystick_enabled = True
+            # control lockout
+            if joystick_enabled == False:
+                allow_continue = False
+            else:
+                allow_continue = True
             
     # print analog axes
     y_offset = 50
