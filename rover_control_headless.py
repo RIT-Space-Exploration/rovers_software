@@ -45,6 +45,13 @@ joystick = pygame.joystick.Joystick(0)
 joystick.init()
             
 while True:
+    # handle joy device removed
+    while pygame.JOYDEVICEREMOVED:
+        if pygame.JOYDEVICEADDED:
+            joystick = pygame.joystick.Joystick(0)
+            joystick.init()
+    
+    # process events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
