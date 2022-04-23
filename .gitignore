@@ -1,4 +1,1 @@
-log/
-build/
-install/
-src/rplidar_ros
+.DS_Store

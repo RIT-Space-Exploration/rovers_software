@@ -1,5 +1,0 @@
-repositories:
-  rplidar_ros:
-    type: git
-    url: https://github.com/ncnynl/rplidar_ros2.git
-    version: master
