@@ -1,19 +1,14 @@
 import pygame
 import os
-os.environ['SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS'] = '1'
-#os.environ['SDL_VIDEODRIVER'] = 'dummy'
-import math
 import RPi.GPIO as GPIO
 from time import sleep
 
+os.environ['SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS'] = '1'
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
+
 pygame.init()
-#pygame.font.init()
-#joystick = pygame.joystick.Joystick(0)
-#joystick.init()
 screen = pygame.display.set_mode((400, 600))
 pygame.event.set_grab(True)
-#font = pygame.font.SysFont(None, 24)
-#print(joystick.get_numbuttons())
 
 ledpin_left = (12, 18)
 ledpin_right = (13, 19)				# PWM pin connected to LED
@@ -61,11 +56,6 @@ while True:
     screen.fill((0, 0, 0))
     for axis in range(joystick.get_numaxes()):
         axis_val = joystick.get_axis(axis)
-        #axis_text = font.render(str(axis), True, (255, 255, 255))
-        #val_text = font.render(str(axis_val), True, (255, 255, 255))
-        # Print axis and value pairs
-        #screen.blit(axis_text, (20, y_offset))
-        #screen.blit(val_text, (200, y_offset))
         y_offset += 30
 
     # forward and backward
@@ -78,17 +68,9 @@ while True:
     left_duty_cycle = int(left_axis/abs(left_axis) * left_axis**2 * 10 + 28)
     right_duty_cycle = int(right_axis/abs(right_axis) * right_axis**2 * 10 + 28)
 
-    #ldc_text = font.render(str(left_duty_cycle) + ' pulse time: ' + str(50*left_duty_cycle), True, (255,255,255))
-    #screen.blit(ldc_text, (50, 400))
-    #rdc_text = font.render(str(right_duty_cycle) + 'pulse time: ' + str(50*right_duty_cycle), True, (255,255,255))
-    #screen.blit(rdc_text, (50, 450))
-
-
     # button 5 should be right bumper
     # should only move if rb is pressed
     if joystick.get_button(7):
-        #driving_text = font.render('Driving!', True, (255,255,255))
-        #screen.blit(driving_text, (50, 300))
         pwm_left_rear.ChangeDutyCycle(left_duty_cycle)
         pwm_left_front.ChangeDutyCycle(left_duty_cycle)
         pwm_right_front.ChangeDutyCycle(right_duty_cycle)
@@ -101,5 +83,3 @@ while True:
     
     pygame.display.update()
     sleep(0.05)
-
-    
