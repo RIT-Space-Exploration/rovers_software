@@ -1,6 +1,9 @@
 import pygame
 import os
-import RPi.GPIO as GPIO
+import board
+import busio
+from adafruit_servokit import ServoKit
+# import RPi.GPIO as GPIO
 from time import sleep
 
 os.environ['SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS'] = '1'
@@ -10,26 +13,20 @@ pygame.init()
 screen = pygame.display.set_mode((400, 600))
 pygame.event.set_grab(True)
 
-ledpin_left = (12, 18)
-ledpin_right = (13, 19)				# PWM pin connected to LED
-GPIO.setwarnings(False)			#disable warnings
-GPIO.setmode(GPIO.BOARD)		#set pin numbering system
+i2c = busio.I2C(board.SCL, board.SDA)
 
-GPIO.setup(ledpin_left[0], GPIO.OUT)
-GPIO.setup(ledpin_left[1], GPIO.OUT)
-GPIO.setup(ledpin_right[0], GPIO.OUT)
-GPIO.setup(ledpin_right[1], GPIO.OUT)
-PWM_OFF = 28
+kit = ServoKit(channels=16)
 
-pwm_left_rear = GPIO.PWM(ledpin_left[0], 200)		#create PWM instance with frequency
-pwm_left_front = GPIO.PWM(ledpin_left[1], 200)		#create PWM instance with frequency
-pwm_right_rear = GPIO.PWM(ledpin_right[0], 200)
-pwm_right_front = GPIO.PWM(ledpin_right[1], 200)
+frontRight = kit.continuous_servo[0]
+backRight = kit.continuous_servo[1]
+frontLeft = kit.continuous_servo[2]
+backLeft = kit.continuous_servo[3]
 
-pwm_left_rear.start(PWM_OFF)				#start PWM of required Duty Cycle 
-pwm_left_front.start(PWM_OFF)
-pwm_right_rear.start(PWM_OFF)
-pwm_right_front.start(PWM_OFF)
+frontRight.set_pulse_width_range(1000, 2000)
+backRight.set_pulse_width_range(1000, 2000)
+frontLeft.set_pulse_width_range(1000, 2000)
+backLeft.set_pulse_width_range(1000, 2000)
+
 
 not_connected = True
 
@@ -62,26 +59,19 @@ while True:
     left_axis += ((left_axis_target - left_axis) / SLOPE)
     right_axis += ((right_axis_target - right_axis) / SLOPE)
 
-    # calculate left and right axis
-    left_axis = 0.001 if abs(left_axis) < 0.1 else left_axis
-    right_axis = 0.001 if abs(right_axis) < 0.1 else right_axis
-
-    # calculate left and right duty cycle
-    left_duty_cycle = int(left_axis/abs(left_axis) * left_axis**2 * 10 + 28)
-    right_duty_cycle = int(right_axis/abs(right_axis) * right_axis**2 * 10 + 28)
+    print(f"L: {left_axis} R: {right_axis}")
 
     # button 5 should be right bumper
     # should only move if rb is pressed
     if joystick.get_button(7):
-        pwm_left_rear.ChangeDutyCycle(left_duty_cycle)
-        pwm_left_front.ChangeDutyCycle(left_duty_cycle)
-        pwm_right_front.ChangeDutyCycle(right_duty_cycle)
-        pwm_right_rear.ChangeDutyCycle(right_duty_cycle)
+        frontRight.throttle = right_axis
+        backRight.throttle = right_axis
+        frontLeft.throttle = left_axis
+        backLeft.throttle = left_axis
     else:
-        pwm_left_rear.ChangeDutyCycle(PWM_OFF)
-        pwm_left_front.ChangeDutyCycle(PWM_OFF)
-        pwm_right_front.ChangeDutyCycle(PWM_OFF)
-        pwm_right_rear.ChangeDutyCycle(PWM_OFF)
-    
+        frontRight.throttle = 0
+        backRight.throttle = 0
+        frontLeft.throttle = 0
+        backLeft.throttle = 0    
     pygame.display.update()
     sleep(0.05)
