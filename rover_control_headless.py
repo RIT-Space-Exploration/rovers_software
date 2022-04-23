@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 os.environ['SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS'] = '1'
-#os.environ['SDL_VIDEODRIVER'] = 'dummy'
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
 
 pygame.init()
 screen = pygame.display.set_mode((400, 600))
