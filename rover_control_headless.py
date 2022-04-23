@@ -33,6 +33,8 @@ pwm_right_front.start(PWM_OFF)
 
 not_connected = True
 
+SLOPE = 200
+
 # initial connection
 while not_connected:
     for event in pygame.event.get():
@@ -46,6 +48,8 @@ joystick = pygame.joystick.Joystick(0)
 joystick.init()
             
 joystick_enabled = True
+left_duty_cycle_target, right_duty_cycle_target = 0, 0
+left_duty_cycle_current, right_duty_cycle_current = 0, 0
 while True:
     # process events
     allow_continue = False 
@@ -81,19 +85,42 @@ while True:
     left_axis = -1 * joystick.get_axis(1)
     right_axis = 1 * joystick.get_axis(3)
 
+    # calculate left and right axis
     left_axis = 0.001 if abs(left_axis) < 0.1 else left_axis
     right_axis = 0.001 if abs(right_axis) < 0.1 else right_axis
 
-    left_duty_cycle = int(left_axis/abs(left_axis) * left_axis**2 * 10 + 28)
-    right_duty_cycle = int(right_axis/abs(right_axis) * right_axis**2 * 10 + 28)
+    # calculate left and right duty cycle
+    left_duty_cycle_target = int(left_axis/abs(left_axis) * left_axis**2 * 10 + 28)
+    right_duty_cycle_target = int(right_axis/abs(right_axis) * right_axis**2 * 10 + 28)
+
+    # scale duty cycles over loop time
+    if left_duty_cycle_current < left_duty_cycle_target:
+        left_duty_cycle_current += left_duty_cycle_target / SLOPE
+
+    if right_duty_cycle_current < right_duty_cycle_target:
+        right_duty_cycle_current += right_duty_cycle_target / SLOPE
+
+    # if controller goes to zero, all goes to zero
+    if left_duty_cycle_target == 0:
+        left_duty_cycle_current = 0
+
+    if right_duty_cycle_target == 0:
+        right_duty_cycle_current = 0
+    
+    # debug printing
+    if left_duty_cycle_current != 0:
+        print(f"left target: {left_duty_cycle_target} left current: {left_duty_cycle_current}")
+    
+    if right_duty_cycle_current != 0:
+        print(f"right target: {right_duty_cycle_target} right current: {right_duty_cycle_current}")
 
     # button 5 should be right bumper
     # should only move if rb is pressed
     if joystick.get_button(7):
-        pwm_left_rear.ChangeDutyCycle(left_duty_cycle)
-        pwm_left_front.ChangeDutyCycle(left_duty_cycle)
-        pwm_right_front.ChangeDutyCycle(right_duty_cycle)
-        pwm_right_rear.ChangeDutyCycle(right_duty_cycle)
+        pwm_left_rear.ChangeDutyCycle(left_duty_cycle_current)
+        pwm_left_front.ChangeDutyCycle(left_duty_cycle_current)
+        pwm_right_front.ChangeDutyCycle(right_duty_cycle_current)
+        pwm_right_rear.ChangeDutyCycle(right_duty_cycle_current)
     else:
         pwm_left_rear.ChangeDutyCycle(PWM_OFF)
         pwm_left_front.ChangeDutyCycle(PWM_OFF)
